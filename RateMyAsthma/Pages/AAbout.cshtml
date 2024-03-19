@@ -1,0 +1,50 @@
+﻿@page
+@model RateMyAsthma.Pages.AAboutModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
+    <title>About Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        #myButton {
+            font-size: 24px;
+            padding: 20px 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="myButton" onclick="showInfo()">Click for info</button>
+        <div>
+            <a href="AMain" class="btn bg-warning text-white"> Return </a>
+        </div>
+    </div>
+
+    <div id="info"></div>
+
+    <script>
+        function showInfo() {
+            document.getElementById("info").innerText = "Thanks, I have now stolen your credit card information.";
+            document.getElementById("info").innerHTML += "<br>Just kidding! This and more buttons will be used to reveal information about the website, sources, images, etc.";
+        }
+    </script>
+</body>
+</html>

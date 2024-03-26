@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AsthmaAPI.Repositories
 {
-    public class IAClass : IAs
+    public class IAClass : CityReview
     {
         private readonly DBContextClass _dbContextClass;
 
@@ -15,10 +15,10 @@ namespace AsthmaAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<Location>> AGetLocation(string City)
+        public async Task<List<City>> AGetLocation(string City)
         {
             var param = new SqlParameter("@City", City);
-            var locations = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec GetCity @City;", param).ToListAsync()); 
+            var locations = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec GetCity1 @City;", param).ToListAsync()); 
             return locations;
         }
     }

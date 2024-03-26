@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace AsthmaAPI.Repositories
 {
-    public interface IAs
+    public interface CityReview
     {
-        public Task<List<Location>> AGetLocation(string City);
+        public Task<List<City>> AGetLocation(string City);
     }
 }

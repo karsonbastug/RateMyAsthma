@@ -8,17 +8,17 @@ namespace AsthmaAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AsthmaController : ControllerBase
+    public class CityReviewController : ControllerBase
     {
-        private readonly IAs aService;
+        private readonly CityReview aService;
 
-        public AsthmaController(IAs aService)
+        public CityReviewController(CityReview aService)
         {
             this.aService = aService;
         }
 
         [HttpGet("{City}")]
-        public async Task<List<Location>> AGetLocation(string City)
+        public async Task<List<City>> AGetLocation(string City)
         {
             var locationDetails = await aService.AGetLocation(City);
             if (locationDetails == null)

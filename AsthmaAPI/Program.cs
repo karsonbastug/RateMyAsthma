@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<CityReview, IAClass>();
 builder.Services.AddScoped<MaxReview, MaxReviewClass>();
+builder.Services.AddScoped<IgetLocDetails, getLocDetails>();
+builder.Services.AddScoped<IAvgRPSByCity, AvgRatingPerSeasonByCity>();
 builder.Services.AddDbContext<DBContextClass>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

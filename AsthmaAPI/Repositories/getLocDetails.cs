@@ -1,4 +1,4 @@
-﻿
+//Author: Chase Baker﻿
 using AsthmaAPI.Data; 
 using AsthmaAPI.Entities;
 using Microsoft.Data.SqlClient;

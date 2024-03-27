@@ -18,7 +18,7 @@ namespace AsthmaAPI.Repositories
         {
             var paramA = new SqlParameter("@City", city);
             var paramB = new SqlParameter("@Season", season);
-            var getRatingPerSeason = await Task.Run(() => _dbContextClass.CitySeasonRating.FromSqlRaw("exec_avgRatePerSeasonInCity @City, @Season;", paramA, paramB).ToListAsync());
+            var getRatingPerSeason = await Task.Run(() => _dbContextClass.CitySeasonRating.FromSqlRaw("exec avgRatePerSeasonInCity @City, @Season;", paramA, paramB).ToListAsync());
             return getRatingPerSeason;
         }
 

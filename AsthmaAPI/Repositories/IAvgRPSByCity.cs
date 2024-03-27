@@ -1,4 +1,5 @@
-﻿using AsthmaAPI.Entities;
+//Author: Chase Baker
+using AsthmaAPI.Entities;
 
 namespace AsthmaAPI.Repositories
 {

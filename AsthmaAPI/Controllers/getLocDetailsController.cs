@@ -1,4 +1,5 @@
-﻿using AsthmaAPI.Entities;
+//Author: Chase Baker
+using AsthmaAPI.Entities;
 using AsthmaAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.InteropServices;

@@ -1,1 +1,1 @@
-[Link to API README](AsthmaAPI/Repositories/README.md)
+[API Documentation](AsthmaAPI/README.md)

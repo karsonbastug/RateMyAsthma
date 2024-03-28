@@ -37,7 +37,7 @@ Retrieves ratings when the MaxTemp for a day was more than the inputted value
 - {MaxTemp}: The int that identifies your desired range (all ratings when > @MaxTemp)
 
 ### Outputs
-Returns a list of all reviews for your given City, including the following:
+Returns the reviews, rating, and date of the review for when the MaxTemp for that day was more than the inputted value
 
 - string Comment (the reviews for that temperature)
 - int Rating (the rating for that day in that city) 

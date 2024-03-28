@@ -56,3 +56,56 @@ This asynchronous method retrieves a list of reviews from a database using Entit
         }
 ```
 ## 
+
+# Chase Baker's APIs
+
+## /api/getLocDetails/{City}
+
+### Purpose
+Given a city, it will return weather details for that city for the current day.
+
+### Inputs
+- {City}: The string that identifies the desired City user would like to get data for.
+
+### Outputs
+Returns a list of basic weather data from the database for the given city:
+- The maximum temperature (int)
+- The average temperature (int)
+- The mininimum temperature (int)
+- The precipitation (int), in inches, expected that day
+
+  ### Sample Code
+
+  ```js
+          public async Task<List<LocationWeatherE>> spgetLocDetails(string city)
+        {
+            var param = new SqlParameter("@City", city);
+            var getLocWeather = await Task.Run(() => _dbContextClass.LocationWeatherE.FromSqlRaw("exec spgetLocDetails @City;", param).ToListAsync());
+            return getLocWeather;
+        }
+
+## /api/AvgRatingPerSeasonByCity/{City}/{Season}
+
+### Purpose 
+Given a city and a season, returns the average ratings for that city during that season throughout all time.
+
+### Inputs 
+-{City}: The desired city the user would like data to be retrieved for.
+-{Season}: The season user would like the data to be referring to.
+
+### Outputs
+- The season (string) the data is referring to (the same as the input)
+- The Average (int) rating of reviews during that season in that city throughout all time.
+
+### Sample Code
+```js
+public async Task<List<CitySeasonRating>> avgRatePerSeasonInCity(string city, string season)
+        {
+            var paramA = new SqlParameter("@City", city);
+            var paramB = new SqlParameter("@Season", season);
+            var getRatingPerSeason = await Task.Run(() => _dbContextClass.CitySeasonRating.FromSqlRaw("exec avgRatePerSeasonInCity @City, @Season;", paramA, paramB).ToListAsync());
+            return getRatingPerSeason;
+        }
+```
+
+

@@ -2,7 +2,7 @@
 ## [API Documentation](AsthmaAPI/README.md)
 
 ### Karson Bastug SP Change Notice
-There has been an additional Stored Procedure created, named GetCity1. Additionally, GetRatingsForHighTemp has been renamed to AGetTemp. Under the AGetTemp procedure is a comment for the code to delete the old procedure.
+There has been an additional Stored Procedure created, named GetCity1. Additionally, GetRatingsForHighTemp has been modified. You will have to drop then recreate the stored procedure, whichh that command is commented out to make it easy.
 
-#Assignment3
+#KarsonBastugSPChanges
 https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql

@@ -9,7 +9,7 @@ namespace AsthmaAPI.Entities
 {
     public class MaxHealthReview
     {
-        
+        public int? MaxTemp { get; set; }
   
         public int? Rating { get; set; }
 

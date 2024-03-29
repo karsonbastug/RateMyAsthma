@@ -7,4 +7,4 @@ There has been an additional Stored Procedure created, named GetCity1. Additiona
 #KarsonBastugSPChanges
 https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql
 
-[https://github.com/karsonbastug/RateMyAsthma/Proposal.md](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Proposal.md)
+[test](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Proposal.md)

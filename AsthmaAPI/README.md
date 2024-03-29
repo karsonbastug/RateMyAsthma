@@ -140,7 +140,7 @@ Returns a list of basic weather data from the database for the given city:
 
      return rateByTemp;
 
-## /api/GetLocRate/{City}/{Season}
+## /api/GetLocRate/{City}
 
 ### Purpose 
 Given a city, it will allow you to access the ratings and interact. 

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RateMyAsthma", "RateMyAsthma\RateMyAsthma.csproj", "{615D59E3-F3FA-421C-9D81-FEBE729B6E8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsthmaAPI", "AsthmaAPI\AsthmaAPI.csproj", "{AF58EC81-BA8D-4C11-BDF9-141C87D16B33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsthmaAPI", "AsthmaAPI\AsthmaAPI.csproj", "{AF58EC81-BA8D-4C11-BDF9-141C87D16B33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

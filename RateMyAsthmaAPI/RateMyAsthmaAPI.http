@@ -1,0 +1,6 @@
+@RateMyAsthmaAPI_HostAddress = http://localhost:5185
+
+GET {{RateMyAsthmaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

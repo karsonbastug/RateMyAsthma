@@ -130,7 +130,7 @@ Returns a list of basic weather data from the database for the given city:
 
   ```js
           public async Task<ActionResult<List<RateByTemp>>> GetRateByTemperature(int temperature)
- {
+  {
      var rateByTemp = await _rateByTempRepository.GetRateByTemperature(temperature);
 
      if (rateByTemp == null)

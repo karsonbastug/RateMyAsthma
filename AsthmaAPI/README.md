@@ -167,7 +167,7 @@ public async Task<ActionResult<List<LocationRating>>> GetLocationRatings(int loc
         }
 ```
 
-# WeatherForeCast
+# WeatherForecast
 
 ## /api/WeatherForecast/{Weather}
 Currently, we have imported a WeatherForecast API. It retrieves the weather for the given day. We plan on using it to retrieve the weather for your desired location and date, and use that information as a paramter in certain stored procedures.

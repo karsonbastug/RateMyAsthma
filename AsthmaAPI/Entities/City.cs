@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AsthmaAPI.Entities
 
 //KarsonBastugAPII
-
+//PushTest
 {
     public class City
     {

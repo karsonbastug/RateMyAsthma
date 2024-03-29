@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AsthmaAPI.Entities
 
-//KarsonBastugAPI
+//KarsonBastugAPII
 
 {
     public class City

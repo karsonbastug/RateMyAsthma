@@ -109,5 +109,61 @@ public async Task<List<CitySeasonRating>> avgRatePerSeasonInCity(string city, st
             return getRatingPerSeason;
         }
 ```
+# Noah Stalnaker's APIs
 
+## /api/getTemRate/{City}
+!!Important!! 
+This action only calls data for the current date. Even when working, if a new datapoint has not been added to the DB with the date of whenever you run this action, it will return a blank "[]" - that is intentional. 
+
+### Purpose
+Given a city, it will allow you to access of the ratings and the tempurature. 
+
+### Inputs
+- {City}: The string that identifies the desired City user would like to get data for.
+
+### Outputs
+Returns a list of basic weather data from the database for the given city:
+- The average temperature (int)
+- The average rating (int)
+
+  ### Sample Code
+
+  ```js
+          public async Task<ActionResult<List<RateByTemp>>> GetRateByTemperature(int temperature)
+ {
+     var rateByTemp = await _rateByTempRepository.GetRateByTemperature(temperature);
+
+     if (rateByTemp == null)
+     {
+         return NotFound();
+     }
+
+     return rateByTemp;
+
+## /api/AvgRatingPerSeasonByCity/{City}/{Season}
+
+### Purpose 
+Given a city, it will allow you to access the ratings and interact. 
+
+### Inputs 
+-{City}: The desired city the user would like data to be retrieved for.
+
+### Outputs
+- The average rating (int)
+- The Location (int)
+
+### Sample Code
+```js
+public async Task<ActionResult<List<LocationRating>>> GetLocationRatings(int locationId)
+{
+    var locationRatings = await _locationRatingRepository.GetLocationRatings(locationId);
+
+    if (locationRatings == null)
+    {
+        return NotFound();
+    }
+
+    return locationRatings;
+        }
+```
 

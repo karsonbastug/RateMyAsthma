@@ -9,8 +9,10 @@ namespace AsthmaAPI.Entities
 {
     public class LocationRating
     {
-        public int? AverageRating { get; set; }
+        public int? Rating { get; set; }
 
-        public int? LID { get; set; }
+        public string? Comment { get; set; }
+
+        public DateTime? Date { get; set; }
     }
 }

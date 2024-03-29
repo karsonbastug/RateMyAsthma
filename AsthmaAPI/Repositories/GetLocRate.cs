@@ -1,13 +1,12 @@
-﻿//Author: Noah Stalnaker
-using AsthmaAPI.Data;
+﻿using AsthmaAPI.Data;
 using AsthmaAPI.Entities;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace AsthmaAPI.Repositories
 {
-    public class GetLocRate
+    public class GetLocRate : IGetLocRate
     {
         private readonly DBContextClass _dbContextClass;
 
@@ -15,16 +14,12 @@ namespace AsthmaAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<RateByTemp>> spGetRatingForLocations(string city, List<RateByTemp> getLocRate)
+        public async Task<List<LocationRating>> GetRatingForLocations(int LID)
         {
-            var param = new SqlParameter("@City", city);
-            var LocationRating = await Task.Run(() => _dbContextClass.RateByTemp.FromSqlRaw("exec spGetRatingForLocations @City;", param).ToListAsync());
-            return LocationRating;
+            var param = new SqlParameter("@LID", LID);
+            var getLocationRating = await Task.Run(() => _dbContextClass.LocationRating.FromSqlRaw("exec GetRatingForLocations @LID;", param).ToListAsync());
+            return getLocationRating;
         }
 
-        internal Task<ActionResult<List<LocationRating>>> GetLocationRatings(int locationId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

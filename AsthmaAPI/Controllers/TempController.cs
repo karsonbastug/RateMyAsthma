@@ -1,37 +1,32 @@
-﻿// Author: Noah Stalnaker
-
-using AsthmaAPI.Entities;
+﻿using AsthmaAPI.Entities;
 using AsthmaAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace AsthmaAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RateByTempController : ControllerBase
+    public class TempController : Controller
     {
-        private readonly RateByTempController _rateByTempRepository;
+        private readonly IGetTemp GetTemp;
 
-        public RateByTempController(IGetTemp getTemp)
+        public TempController(IGetTemp GetTemp)
         {
-            this.GetTemp = GetRateByTemperature;
+            this.GetTemp = GetTemp;
         }
+        [HttpGet("{MinTemp}/{MaxTemp}")]
 
-        public Func<int, Task<ActionResult<List<RateByTemp>>>> GetTemp { get; }
-
-        [HttpGet("{temperature}")]
-        public async Task<ActionResult<List<RateByTemp>>> GetRateByTemperature(int temperature)
+        public async Task<List<RateByTemp>> GetAverageRatingForTemperatureRange(int MinTemp, int MaxTemp)
         {
-            var rateByTemp = await _rateByTempRepository.GetRateByTemperature(temperature);
-
-            if (rateByTemp == null)
+            var rBT = await GetTemp.GetAverageRatingForTemperatureRange(MinTemp, MaxTemp);
+            if (rBT == null)
             {
-                return NotFound();
+                //return NotFound();
             }
-
-            return rateByTemp;
+            return rBT;
         }
+
+
     }
 }

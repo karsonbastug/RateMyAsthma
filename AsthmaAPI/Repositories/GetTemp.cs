@@ -1,11 +1,11 @@
-﻿//Author: Noah Stalnaker
-using AsthmaAPI.Data;
+﻿using AsthmaAPI.Data;
 using AsthmaAPI.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+
 namespace AsthmaAPI.Repositories
 {
-    public class GetTemp
+    public class GetTemp : IGetTemp
     {
         private readonly DBContextClass _dbContextClass;
 
@@ -13,11 +13,13 @@ namespace AsthmaAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<RateByTemp>> spGetAverageRatingForTemperatureRange(string city, List<RateByTemp> getTemp)
+        public async Task<List<RateByTemp>> GetAverageRatingForTemperatureRange(int MinTemp, int MaxTemp)
         {
-            var param = new SqlParameter("@City", city);
-            var RateByTemps = await Task.Run(() => _dbContextClass.RateByTemp.FromSqlRaw("exec spGetAverageRatingForTemperatureRange @City;", param).ToListAsync());
-            return RateByTemps;
+            var param1 = new SqlParameter("@MinTemp", MinTemp);
+            var param2 = new SqlParameter("@MaxTemp", MaxTemp);
+            var getForTempRange = await Task.Run(() => _dbContextClass.RateByTemp.FromSqlRaw("exec GetAverageRatingForTemperatureRange @MinTemp, @MaxTemp;", param1, param2).ToListAsync());
+            return getForTempRange;
+
         }
     }
 }

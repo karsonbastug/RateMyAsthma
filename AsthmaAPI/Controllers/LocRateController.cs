@@ -1,37 +1,32 @@
-﻿// Author: [Your Name]
-
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using AsthmaAPI.Entities;
 using AsthmaAPI.Repositories;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AsthmaAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LocationRatingController : ControllerBase
+    public class LocRateController : Controller
     {
-        private readonly GetLocRate _locationRatingRepository;
+        private readonly IGetLocRate GetLocRate;
 
-        public LocationRatingController(GetLocRate locationRatingRepository)
+        public LocRateController(IGetLocRate GetLocRate)
         {
-            this.GetLocRate = locationRatingRepository;
+            this.GetLocRate = GetLocRate;
         }
-
-        public GetLocRate GetLocRate { get; }
-
-        [HttpGet("{locationId}")]
-        public async Task<ActionResult<List<LocationRating>>> GetLocationRatings(int locationId)
+        [HttpGet("{LID}")]
+        public async Task<List<LocationRating>> GetRatingForLocations(int LID)
         {
-            var locationRatings = await _locationRatingRepository.GetLocationRatings(locationId);
-
-            if (locationRatings == null)
+            var locRate = await GetLocRate.GetRatingForLocations(LID);
+            if (locRate == null)
             {
-                return NotFound();
+                //return NotFound();
             }
-
-            return locationRatings;
+            return locRate;
         }
+
+
     }
 }

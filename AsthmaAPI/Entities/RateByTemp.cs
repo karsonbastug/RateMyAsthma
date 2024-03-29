@@ -9,8 +9,12 @@ namespace AsthmaAPI.Entities
 {
     public class RateByTemp
     {
-        public int? AverageRating { get; set; }
+        public double? Rating { get; set; }
 
-        public int? AvgTemp { get; set; }
+        public DateTime? Date { get; set; }
+
+        public string Address { get; set; }
+
+        public string State { get; set; }
     }
 }

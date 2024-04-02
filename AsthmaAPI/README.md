@@ -63,6 +63,9 @@ This asynchronous method retrieves a list of reviews from a database using Entit
 !!Important!! 
 This action only calls data for the current date. Even when working, if a new datapoint has not been added to the DB with the date of whenever you run this action, it will return a blank "[]" - that is intentional. 
 
+!! Ensure SPs "spgetLocDetails" and "avgRatePerSeasonInCity" are in your version of the database
+See: https://github.com/karsonbastug/Assignment3/blob/main/ChaseBakerSps.sql
+
 ### Purpose
 Given a city, it will return weather details for that city for the current day.
 

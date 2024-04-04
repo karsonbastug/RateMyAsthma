@@ -73,8 +73,7 @@ body {
 
 
 .return-button {
-    position: absolute;
-    top: 85%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -89,16 +88,6 @@ html {
     }
 }
 
-.background {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
 
 @keyframes fadeIn {
     0% {
@@ -118,21 +107,6 @@ html {
     animation: fadeIn 5s ease forwards;
 }
 
-.card {
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-}
-
-    .card h2 {
-        margin-bottom: 15px;
-        font-size: 24px;
-    }
-
-    .card p {
-        line-height: 1.8;
-    }
 
 body, html {
     height: 100%;
@@ -145,3 +119,33 @@ body, html {
     font-size: 24px;
     padding: 20px 40px;
 }
+
+.rectangle {
+    width: 750px;
+    height: 150px;
+    background-color: #f0f0f0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+}
+
+    .rectangle.taller {
+        height: 300px; 
+        margin-top: 40px; 
+    }
+
+    .rectangle p {
+        margin: 0;
+        font-size: 18px;
+    }
+
+
+
+ 
+
+
+

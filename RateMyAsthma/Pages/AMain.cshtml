@@ -19,36 +19,39 @@
 
 <body>
 
-    <div>
-        <h1 class="title">Wellness in Weather</h1>
-        <h2 class="title" style="font-size: 30px">Learn What Medical Conditions Are At Risk Due To The Weather</h2>
+    <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="title">Rate My Asthma</h1>
+        <h2 class="title" style="font-size: 30px">A community for people with Asthma to rate how bad their symptoms are</h2>
     </div>
 
     <div class="container">
-        <h1 style="font-size:20px">First, select your location</h1>
+        <h1 style="font-size:20px">Select your desired location then for when you would like to see the reviews</h1>
         <form action="/action_page.php">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search...
+                <input type="text" class="form-control" placeholder="Search For A City...
 " name="search">
                 <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><iicon glyphicon-searc class="glyphh"></i></button>
+                    <button class="btn btn-default" type="submit"><iicon glyphicon-searc class="glyphh">Browse By City</i></button>
                 </div>
             </div>
         </form>
     </div>
 
 
-    <table style="margin-top: 250px;">
 
-        <thead>
-            <tr>
-                <th><a href="AFuture" class="btn bg-warning text-white" style="font-size:40px">Future Reports</a></th>
-                <th><a href="AToday" class="btn bg-warning text-white" style="font-size:60px">Today's Report</a></th>
-                <th><a href="AAbout" class="btn bg-warning text-white" style="font-size:40px">  Site Info/Help  </a></th>
 
-            </tr>
-        </thead>
-    </table>
+    <div style="position: fixed; top: 80%; left: 50%; transform: translate(-50%, -50%);">
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="AReview" class="btn bg-warning text-white" style="font-size:40px">Write a Review</a></th>
+                    <th><a href="AToday" class="btn bg-warning text-white" style="font-size:40px">Today's Reviews</a></th>
+                    <th><a href="APast" class="btn bg-warning text-white" style="font-size:40px">Past Reviews</a></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
 
 </body>
 </html>

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace RateMyAsthma.Pages
 {
-    public class AFutureModel : PageModel
+    public class ACustomSearchModel : PageModel
     {
         public void OnGet()
         {

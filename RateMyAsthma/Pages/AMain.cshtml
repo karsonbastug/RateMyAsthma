@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/site.css">
     <link rel="icon" type="image/png" href="cloud.jpg" />
-    <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css"/>
+    <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -28,30 +28,51 @@
         <h1 style="font-size:20px">Select your desired location then for when you would like to see the reviews</h1>
         <form action="/action_page.php">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search For A City...
-" name="search">
+                <input type="text" class="form-control" placeholder="Search For A City..." name="search" id="searchBar">
                 <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><iicon glyphicon-searc class="glyphh">Browse By City</i></button>
+                    <a class="btn bbg-warning" href="ACustomSearch"><iicon glyphicon-searc class="glyphh">Custom Search</i></a>
                 </div>
             </div>
         </form>
     </div>
 
-
-
-
     <div style="position: fixed; top: 80%; left: 50%; transform: translate(-50%, -50%);">
-        <table>
+        <table id="buttonsTable">
             <thead>
                 <tr>
-                    <th><a href="AReview" class="btn bg-warning text-white" style="font-size:40px">Write a Review</a></th>
-                    <th><a href="AToday" class="btn bg-warning text-white" style="font-size:40px">Today's Reviews</a></th>
-                    <th><a href="APast" class="btn bg-warning text-white" style="font-size:40px">Past Reviews</a></th>
+                    <th style="display: none;">
+                        <a href="AReview" class="btn bg-warning text-white" style="font-size:40px">Write a Review</a>
+                    </th>
+                    <th style="display: none;">
+                        <a href="AToday" class="btn bg-warning text-white" style="font-size:40px">Today's Reviews</a>
+                    </th>
+                    <th style="display: none;">
+                        <a href="APast" class="btn bg-warning text-white" style="font-size:40px">Past Reviews</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="3" style="text-align: center;">
+                        <a href="AAbout" class="btn bg-warning text-white" style="font-size:40px">Questions/About</a>
+                    </th>
                 </tr>
             </thead>
         </table>
     </div>
 
+    <script>
+        function toggleButtons() {
+            var searchBar = document.getElementById('searchBar');
+            var buttonsTable = document.getElementById('buttonsTable');
+            if (searchBar.value.trim() !== '') {
+                $('#buttonsTable th').fadeIn();
+            } else {
+                $('#buttonsTable th').fadeOut();
+            }
+        }
+
+        var searchBar = document.getElementById('searchBar');
+        searchBar.addEventListener('input', toggleButtons);
+    </script>
 
 </body>
 </html>

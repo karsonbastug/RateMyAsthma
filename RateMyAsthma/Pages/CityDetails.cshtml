@@ -1,0 +1,10 @@
+﻿@page
+@model RateMyAsthma.Pages.CityDetailsModel
+@{
+    var City = HttpContext.Request.Query["City"];
+}
+<h2 id="CityName" style="visibility:hidden;"></h2>
+<div id="CityReviews" style="visibility:hidden;"></div>
+<script type="module">
+    displayCityReviews(@City)
+</script>

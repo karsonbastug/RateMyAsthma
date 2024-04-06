@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\New York City.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\MPic.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\New York City.png" />
+  </ItemGroup>
+
 </Project>

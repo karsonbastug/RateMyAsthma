@@ -4,7 +4,6 @@ using AsthmaAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.InteropServices;
 
-using Microsoft.AspNetCore.Mvc;
 
 namespace AsthmaAPI.Controllers
 {

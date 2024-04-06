@@ -1,8 +1,22 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowMyRazorPagesApp",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:7070")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        }
+
+        );
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

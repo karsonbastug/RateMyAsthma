@@ -2,3 +2,11 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+
+async function displayCityReviews(City) {
+    const response = await fetch(`https://localhost:7070/api/CityReview/${City}`)
+    const data = await response.json();
+    document.getElementById('CityName').innerHTML = data[0].City
+    document.getElementById('CityName').style.visibility = "visible";
+}

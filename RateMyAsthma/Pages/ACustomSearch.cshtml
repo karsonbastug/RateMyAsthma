@@ -74,7 +74,7 @@
                 <li>Placement</li>
             </ul>
             <form id="searchForm">
-                
+
                 <label for="maxTemp">Max Temp:</label>
                 <input type="text" id="maxTemp" name="maxTemp"><br>
                 <label for="season">Season:</label>
@@ -83,7 +83,15 @@
                 <input type="text" id="city" name="city"><br>
                 <button type="button" onclick="submitForm()">Search</button>
             </form>
+            <form id="searchForm">
+                <label for="minTemp">Temp Range:Min Value</label>
+                <input type="text" id="trminTemp" name="trminTemp">
+                <label for="maxTemp">Temp Range:Max Value</label>
+                <input type="text" id="trmaxTemp" name="trmaxTemp">
+                <button type="button" onclick="submitForm()">Search</button>
+            </form>
         </nav>
+
 
         <article>
             <h1>Past reviews for (City)</h1>

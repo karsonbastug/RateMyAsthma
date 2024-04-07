@@ -2,3 +2,74 @@
 @model RateMyAsthma.Pages.AReviewModel
 @{
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Submit Review</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightsteelblue;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: lavender;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea, input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h1 style="color: #123450">Submit Review for (City) on (Date)</h1>
+    <form action="/submit" method="post">
+        <div class="form-group">
+            <label for="comment" style="color: #123456">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" cols="50" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rating", style="color: #123456">Rating (1-10):</label>
+            <input type="number" id="rating" name="rating" min="1" max="10" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <footer style="display: flex; justify-content: center;">
+        <a href="AMain" class="btn bg-warning text-white">Return</a>
+    </footer>
+
+</body>
+</html>

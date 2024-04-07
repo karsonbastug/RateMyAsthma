@@ -1,45 +1,89 @@
 ﻿@page
-@model RateMyAsthma.Pages.ATodayModel
-@{
-}
+@model RateMyAsthma.Pages.APastModel
+
 <!DOCTYPE html>
-<html lang="en" style="zoom: 1.5;">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>CSS Template</title>
     <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightsteelblue;
+        }
+
+        header {
+            background-color: #123456;
+            padding: 20px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            background-color: lavender;
+            padding: 20px;
+            height: 75vh;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 75vh;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #123450;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            clear: both;
+        }
+    </style>
 </head>
-
 <body>
 
-    <header style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <h1 style="font-size: 40px; font-family: Bahnschrift; margin: 0;">Asthma Reviews for (CityName)</h1>
-            <h2 style="font-size: 40px; font-family: Bahnschrift; margin: 0;">(Date)</h2>
-        </div>
-        <div style="margin-left: auto;">
-            <a href="AMain" class="btn bg-warning text-white">Return</a>
-        </div>
-    </header>
 
+    <section>
+        <nav>
+            Past Weather
+            <ul>
+                <li>Placement</li>
+            </ul>
+        </nav>
 
+        <article>
+            <h1>Past reviews for (City)</h1>
+            <p>poopfart</p>
+        </article>
+    </section>
 
-
-
-    <div class="rectangle">
-        <h2>WeatherForecastPH</h2>
-    </div>
-
-
-
-
-    <div class="rectangle taller">
-        <h2>ReviewlistPH</h2>
-    </div>
+    <footer>
+        <a href="AMain" class="btn bg-warning text-white">Return</a>
+    </footer>
 
 </body>
 </html>
-

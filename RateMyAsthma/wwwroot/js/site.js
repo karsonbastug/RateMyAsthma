@@ -7,6 +7,6 @@
 async function displayCityReviews(City) {
     const response = await fetch(`https://localhost:7070/api/CityReview/${City}`)
     const data = await response.json();
-    document.getElementById('CityName').innerHTML = data[0].City
-    document.getElementById('CityName').style.visibility = "visible";
+    document.getElementById('City').innerHTML = data[0].City
+    document.getElementById('City').style.visibility = "visible";
 }

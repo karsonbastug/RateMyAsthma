@@ -6,6 +6,6 @@ namespace AsthmaAPI.Repositories
 {
     public interface CityReview
     {
-        public Task<List<City>> AGetLocation(string City);
+        public Task<List<City1>> AGetLocation(string City);
     }
 }

@@ -19,7 +19,7 @@ namespace AsthmaAPI.Controllers
         }
 
         [HttpGet("{City}")]
-        public async Task<List<City>> AGetLocation(string City)
+        public async Task<List<City1>> AGetLocation(string City)
         {
             var locationDetails = await aService.AGetLocation(City);
             if (locationDetails == null)

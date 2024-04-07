@@ -16,7 +16,7 @@ namespace AsthmaAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<City>> AGetLocation(string City)
+        public async Task<List<City1>> AGetLocation(string City)
         {
             var param = new SqlParameter("@City", City);
             var locations = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec GetCity1 @City;", param).ToListAsync()); 

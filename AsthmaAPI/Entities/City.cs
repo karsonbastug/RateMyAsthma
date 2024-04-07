@@ -6,10 +6,11 @@ namespace AsthmaAPI.Entities
 //KarsonBastugAPII
 //PushTest
 {
-    public class City
+    public class City1
     {
         [Key]
 
+        public string? City {  get; set; }
         public int? MaxTemp {  get; set; }
         public int? AvgTemp {  get; set; }
         public int? MinTemp { get; set; }

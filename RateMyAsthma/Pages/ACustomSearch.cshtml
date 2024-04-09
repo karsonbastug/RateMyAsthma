@@ -1,6 +1,8 @@
 ﻿@page
 @model RateMyAsthma.Pages.ACustomSearchModel
-
+@{
+    var City = HttpContext.Request.Query["City"];
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +33,8 @@
             float: left;
             width: 30%;
             background-color: lavender;
-            padding: 20px; /* Adjusted padding */
-            height: auto; /* Changed to auto to accommodate content */
+            padding: 20px;
+            height: auto; 
         }
 
             nav ul {
@@ -63,23 +65,23 @@
             clear: both;
         }
 
-        /* Adjusting search bar width */
+    
         form {
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 10px; 
         }
 
         label {
-            display: block; /* Make labels block elements to ensure they stack vertically */
-            margin-bottom: 5px; /* Add some space between labels and input elements */
+            display: block; 
+            margin-bottom: 5px; 
         }
 
         input[type="text"],
         button[type="button"] {
-            width: calc(100% - 10px); /* Set width for input elements and buttons */
-            padding: 6px; /* Adjusted padding */
-            margin-bottom: 5px; /* Reduced margin */
+            width: calc(100% - 10px); 
+            padding: 6px; 
+            margin-bottom: 5px;
             box-sizing: border-box;
-            font-size: 14px; /* Adjusted font size */
+            font-size: 14px; 
         }
     </style>
 </head>
@@ -87,6 +89,7 @@
 
 
     <section>
+
 
         <nav>
  

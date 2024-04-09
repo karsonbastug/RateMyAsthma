@@ -1,7 +1,7 @@
 ﻿@page
 @model RateMyAsthma.Pages.ATodayModel
 @{
-
+    var City = HttpContext.Request.Query["City"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +61,14 @@
     </style>
 </head>
 <body>
+
+    <h1>Today reviews for:</h1>
+    <h2 id="cityName" style="visibility: visible;"></h2>
+    <div id="cityRating" style="visibility: visible;"></div>
+    <script type="module">
+        displayCityReviews('@City');
+    </script>
+
     <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
         <h1 class="title" style="font-size: 60px;">Today Reviews For (City)</h1>
         <h2>Weather Forecast For This Week</h2>
@@ -97,6 +105,10 @@
     </div>
     <ol id="reviewList">
         <ul>
+
+
+
+
             <li>R1<span class="rating">Rating 1</span></li>
             <li>R2<span class="rating">Rating 2</span></li>
             <li>R3<span class="rating">Rating 4</span></li>

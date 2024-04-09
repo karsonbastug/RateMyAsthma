@@ -1,0 +1,74 @@
+﻿@page
+@model RateMyAsthma.Pages.ABrowseModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link rel="icon" type="image/png" href="cloud.jpg" />
+    <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
+    <style>
+      
+        body {
+            background-image: url('cloud.jpg');
+            background-repeat: repeat;
+            background-position: center;
+            background-size: auto;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            opacity: 0; 
+            transition: opacity 1s ease-out; 
+        }
+
+        li {
+            font-size: 30px;
+            margin-bottom: 10px; 
+            background-color: #f1f1f1; 
+            padding: 10px; 
+        }
+
+       
+        ol.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<!-- No alt text for the cloud as it is a flaticon used purely for design, its location can't be accessed/hovered over for a alt-text-->
+
+<body>
+
+    <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="title">City List</h1>
+        <h2 class="title" style="font-size: 30px">Don't see your city? <a href="AAbout">Submit it here</a></h2>
+    </div>
+    <ol id="cityList">
+        <li>
+            Chicago
+        </li>
+        <li>
+            New York
+        </li>
+        <li>
+            Los Angeles
+        </li>
+ 
+    </ol>
+    <footer>
+        <a href="AMain" class="btn bg-warning text-white">Return</a>
+    </footer>
+
+    <script>
+
+        setTimeout(function () {
+            document.getElementById('cityList').classList.add('show');
+        }, 2000); 
+    </script>
+</body>
+</html>

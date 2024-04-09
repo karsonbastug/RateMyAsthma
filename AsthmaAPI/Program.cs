@@ -5,6 +5,8 @@ using AsthmaAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 builder.Services.AddScoped<CityReview, IAClass>();
 builder.Services.AddScoped<MaxReview, MaxReviewClass>();
@@ -28,7 +30,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowMyRazorPagesApp",
         builder =>
         {
-            builder.WithOrigins("https://localhost:7171")
+            builder.WithOrigins("https://localhost:7070")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         }

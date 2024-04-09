@@ -1,6 +1,8 @@
 ﻿@page
 @model RateMyAsthma.Pages.APastModel
-
+@{
+   
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,81 +11,92 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
+        .horizontal-list {
+            list-style-type: none;
             padding: 0;
-            background-color: lightsteelblue;
-        }
-
-        header {
-            background-color: #123456;
-            padding: 20px;
+            margin: 0;
             text-align: center;
-            font-size: 35px;
-            color: white;
         }
 
-        nav {
-            float: left;
-            width: 30%;
-            background-color: lavender;
-            padding: 20px;
-            height: 75vh;
+        .horizontal-list li {
+            display: inline-block;
+            margin: 0 10px;
         }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-        article {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 75vh;
+        .horizontal-list li span {
+            display: block;
+            font-size: 14px;
+            margin-top: 5px;
         }
 
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
+        .horizontal-list li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 16px;
         }
 
-        footer {
-            background-color: #123450;
-            padding: 10px 0;
+        h2 {
             text-align: center;
-            color: white;
-            clear: both;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
+
+        #reviewList {
+            font-size: 50px;
+            margin-top: 50px; 
+            text-align: center;
+        }
+
+        .rating {
+           font-size: 20px;
+        }
+
     </style>
 </head>
 <body>
+    <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="title" style="font-size: 60px;">Past Reviews For (City)</h1>
+        <h2>Weather Forecast For This Week</h2> 
+        <ul class="horizontal-list">
+            <li>
+                <a>Monday</a>
+                <span>25°C</span>
+            </li>
+            <li>
+                <a>Tuesday</a>
+                <span>24°C</span>
+            </li>
+            <li>
+                <a>Wednesday</a>
+                <span>26°C</span>
+            </li>
+            <li>
+                <a>Thursday</a>
+                <span>27°C</span>
+            </li>
+            <li>
+                <a>Friday</a>
+                <span>26°C</span>
+            </li>
+            <li>
+                <a>Saturday</a>
+                <span>27°C</span>
+            </li>
+            <li>
+                <a>Sunday</a>
+                <span>25°C</span>
+            </li>
+        </ul>
+    </div>
+    <ol id="reviewList">
+        <ul id="reviewList">
+            <li>R1<span class="rating">Rating 1</span></li>
+            <li>R2<span class="rating">Rating 2</span></li>
+            <li>R3<span class="rating">Rating 4</span></li>
+        </ul>
 
-
-    <section>
-        <nav>
-            Past Weather
-            <ul>
-                <li>Placement</li>
-            </ul>
-        </nav>
-
-        <article>
-            <h1>Past reviews for (City)</h1>
-            <p>poopfart</p>
-        </article>
-    </section>
-
-    <footer>
-        <a href="AMain" class="btn bg-warning text-white">Return</a>
-    </footer>
-
+    </ol>
 </body>
 </html>
+

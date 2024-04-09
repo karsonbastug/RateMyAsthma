@@ -10,7 +10,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowMyRazorPagesApp",
         builder =>
         {
-            builder.WithOrigins("https://localhost:7070")
+            builder.WithOrigins("https://localhost:7171")
             .AllowAnyHeader()
             .AllowAnyMethod();
         }
@@ -28,6 +28,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowMyRazorPagesApp");
 app.UseStaticFiles();
 
 app.UseRouting();

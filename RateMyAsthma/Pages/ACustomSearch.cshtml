@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSS Template</title>
     <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,8 +31,8 @@
             float: left;
             width: 30%;
             background-color: lavender;
-            padding: 20px;
-            height: 75vh;
+            padding: 20px; /* Adjusted padding */
+            height: auto; /* Changed to auto to accommodate content */
         }
 
             nav ul {
@@ -47,6 +46,7 @@
             width: 70%;
             background-color: #f1f1f1;
             height: 75vh;
+           
         }
 
         section::after {
@@ -62,43 +62,73 @@
             color: white;
             clear: both;
         }
+
+        /* Adjusting search bar width */
+        form {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        label {
+            display: block; /* Make labels block elements to ensure they stack vertically */
+            margin-bottom: 5px; /* Add some space between labels and input elements */
+        }
+
+        input[type="text"],
+        button[type="button"] {
+            width: calc(100% - 10px); /* Set width for input elements and buttons */
+            padding: 6px; /* Adjusted padding */
+            margin-bottom: 5px; /* Reduced margin */
+            box-sizing: border-box;
+            font-size: 14px; /* Adjusted font size */
+        }
     </style>
 </head>
 <body>
 
 
     <section>
-        <nav>
-            Custom Search
-            <ul>
-                <li>Placement</li>
-            </ul>
-            <form id="searchForm">
 
-                <label for="maxTemp">Max Temp:</label>
-                <input type="text" id="maxTemp" name="maxTemp"><br>
+        <nav>
+ 
+            <ul>
+                <li></li>
+            </ul>
+            <form id="searchForm1">
+                <h1 style="font-size: 20px;">Temp High Reviews:</h1>
+                <label for="maxTemp1">Temp</label>
+                <input type="text" id="maxTemp1" name="maxTemp1">
+                <button type="button" onclick="submitForm()">Search</button>
+            </form>
+            <form id="searchForm2">
+                <h1 style="font-size: 20px;">City-Season Reviews:</h1>
                 <label for="season">Season:</label>
                 <input type="text" id="season" name="season"><br>
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city"><br>
                 <button type="button" onclick="submitForm()">Search</button>
             </form>
-            <form id="searchForm">
-                <label for="minTemp">Temp Range:Min Value</label>
+            <form id="searchForm3">
+                <h1 style="font-size: 20px;">Temp Range Reviews:</h1>
+                <label for="minTemp">Min Temp</label>
                 <input type="text" id="trminTemp" name="trminTemp">
-                <label for="maxTemp">Temp Range:Max Value</label>
+                <label for="maxTemp">Max Temp</label>
                 <input type="text" id="trmaxTemp" name="trmaxTemp">
                 <button type="button" onclick="submitForm()">Search</button>
             </form>
         </nav>
 
 
-        <article>
-            <h1>Past reviews for (City)</h1>
-            <p>poopfart</p>
-        </article>
-    </section>
+        <article style="font-size: 40px;">
 
+          <h1>Custom Search</h1> 
+          <p>(ReviewPlaceHolder)</p>
+
+
+        </article>
+
+    
+
+    </section>
     <footer>
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>

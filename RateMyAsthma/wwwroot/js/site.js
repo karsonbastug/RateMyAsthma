@@ -11,4 +11,6 @@ async function displayCityReviews(City) {
     document.getElementById('cityName').style.visbility = "visbile";
     document.getElementById('cityRating').innerHTML = data[0].rating;
     document.getElementById('cityRating').style.visbility = "visible";
+    document.getElementById('cityComment').innerHTML = data[0].comment;
+    document.getElementById('cityComment').style.visbility = "visible";
 }

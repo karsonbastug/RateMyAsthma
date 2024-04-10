@@ -1,3 +1,14 @@
+# Changes for Chase/Noah
+
+## Database Changes
+
+The database schema had to be changed. Because it involved changing Primary Keys, the tables will have to be remade. This sounds bad but its really easy. In the database creation tab I added the code, just simple run the drop table in the ordered listed, then rebuild the tables, and re-insert the data. There is also a lot of new data to be inserted. Additionnaly, if any of your SP run the line (table).WID, the .WID needs to be changed to .LID.
+
+
+
+
+
+
 
 ## [Project Proposal](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Proposal.md)
 

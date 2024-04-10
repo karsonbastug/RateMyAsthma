@@ -2,10 +2,17 @@
 
 ## Database Changes
 
-The database schema had to be changed. Because it involved changing Primary Keys, the tables will have to be remade. This sounds bad but its really easy. In the database creation tab I added the code, just simple run the drop table in the ordered listed, then rebuild the tables, and re-insert the data. There is also a lot of new data to be inserted. Additionnaly, if any of your SP run the line (table).WID, the .WID needs to be changed to .LID.
+The database schema had to be changed. Because it involved changing Primary Keys, the tables will have to be remade. In the links below I added the code, just simply run the drop table in the ordered listed, then rebuild the tables, and re-insert the data. There is also a lot of new data to be inserted. Additionnaly, if any of your SP run the line (table).WID, the .WID needs to be changed to .LID.
+
+[New Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
+
+[New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
 
 
 
+
+<br>
+<br>
 
 
 

@@ -11,30 +11,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .horizontal-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-            .horizontal-list li {
-                display: inline-block;
-                margin: 0 10px;
-            }
-
-                .horizontal-list li span {
-                    display: block;
-                    font-size: 14px;
-                    margin-top: 5px;
-                }
-
-                .horizontal-list li a {
-                    text-decoration: none;
-                    color: #333;
-                    display: block;
-                    font-size: 16px;
-                }
 
         h2 {
             text-align: center;
@@ -58,58 +34,99 @@
             margin-top: auto;
             padding: 20px 0;
         }
+
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            position: fixed;
+            left: -425px;
+            top: 440px;
+            transform: translateY(-50%);
+            list-style-type: none;
+            font-size: 35px;
+        }
+
+        li {
+            margin-bottom: 50px;
+        }
+
+        .left-color {
+            position: fixed;
+            top: -200px;
+            left: -500px;
+            width: 370px;
+            height: 1100px;
+            background-color: lavenderblush;
+            z-index: -1;
+        }
+
+        .weather-info {
+            font-size: 25px;
+            color: #123450;
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
-
-    <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
-        <h1 class="title" style="font-size: 60px;">Today Reviews For (City)</h1>
-        <h2>Weather Forecast For This Week</h2>
-        <ul class="horizontal-list">
-            <li>
-                <a>Monday</a>
-                <span>25°C</span>
-            </li>
-            <li>
-                <a>Tuesday</a>
-                <span>24°C</span>
-            </li>
-            <li>
-                <a>Wednesday</a>
-                <span>26°C</span>
-            </li>
-            <li>
-                <a>Thursday</a>
-                <span>27°C</span>
-            </li>
-            <li>
-                <a>Friday</a>
-                <span>26°C</span>
-            </li>
-            <li>
-                <a>Saturday</a>
-                <span>27°C</span>
-            </li>
-            <li>
-                <a>Sunday</a>
-                <span>25°C</span>
-            </li>
-        </ul>
+    <div style="position: fixed; top: -10px; right: 450px;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
+    </div>
+    <div style="position: fixed; top: 40px; right: 750px;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
+    </div>
+    <div style="position: fixed; top: 10px; left: 500px;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
     </div>
 
-    <h1>Today reviews for:</h1>
-    <h2 id="cityName" style="visibility: visible;"></h2>
-    <div id="cityRating" style="visibility: visible;"></div>
-    <div id="cityComment" style="visibility: visible;"></div>
-    <script type="module">
-        displayCityReviews('@City');
-    </script>
+    <div style="position: fixed; top: 140px; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="title" style="font-size: 60px;">This week's forecast and reviews for <span id="cityName" class="title" style="visibility: visible; font-size: 60px;"></span></h1>
 
 
-    </ol>
-    <footer>
+        <div style="position: absolute; top: 260px; left: 50%; transform: translateX(-50%);">
+            <div class="title">
+                <p class="weather-info">
+                    <span id="cityComment" style="display:inline-block;"></span>
+                    <span style="color: #123450;"> | Rating: </span>
+                    <span id="cityRating" style="display:inline-block;"></span>
+                    <span style="color: #123450;">| Temp: 67 </span>
+                    <span id="cityTemp" style="display:inline-block;"></span>
+                    <span style="color: #123450;">| Date:</span>
+                    <span id="cityDate" style="display:inline-block;"></span>
+                </p>
+                <p class="weather-info">Not too bad, a bit windy at times. | Rating: 7 | Temp: 69°F | Date: 4/4/2024</p>
+                <p class="weather-info">Sunny and pleasant, perfect for outdoor activities. | Rating: 9 | Temp: 70°F | Date: 4/5/2024</p>
+                <p class="weather-info">Cloudy with occasional showers, bring an umbrella! | Rating: 6 | Temp: 68°F | Date: 4/6/2024</p>
+               
+ 
+            </div>
+        </div>
+
+
+
+        <script type="module">
+            displayCityReviews('@City');
+        </script>
+
+        <div class="left-color">
+            <ul>
+                <li style="font-size:25px;"><strong><h1>Average Dailies</h1></strong></li>
+                <li>Monday 66°F</li>
+                <li>Tuesday 65°F</li>
+                <li>Wednesday 63°F</li>
+                <li>Thursday 69°F</li>
+                <li>Friday 71°F</li>
+                <li>Saturday 67°F</li>
+                <li>Sunday 65°F</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>
+
 </body>
 </html>
-

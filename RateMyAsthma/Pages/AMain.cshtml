@@ -48,7 +48,7 @@
             <div>
                 <span style="margin-right: 10px;"><a id="todayButton" href="#" class="btn bg-warning text-white" style="font-size:40px">This Week</a></span>
                 <span><a id="pastButton" href="#" class="btn bg-warning text-white" style="font-size:40px">Past Reviews</a></span>
-                <span style="margin-right: 10px;"><a href="AReview" class="btn bg-warning text-white" style="font-size:40px">Write a Review</a></span>
+                <span style="margin-right: 10px;"><a id="reviewButton" href="AReview" class="btn bg-warning text-white" style="font-size:40px">Write a Review</a></span>
             </div>
         </h1>
         <form id="cityForm">
@@ -81,6 +81,7 @@
 
                 document.getElementById('todayButton').href = 'AToday?City=' + encodeURIComponent(city);
                 document.getElementById('pastButton').href = 'APast?City=' + encodeURIComponent(city);
+                document.getElementById('reviewButton').href = 'AReview?City=' + encodeURIComponent(city);
 
                 notification.style.display = 'block';
             }

@@ -6,135 +6,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
 
+    <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: lightsteelblue;
         }
 
-        header {
-            background-color: #123456;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
+        }
+
+        h1 {
             text-align: center;
-            font-size: 35px;
-            color: white;
+            margin-bottom: 40px;
         }
 
-        nav {
-            float: left;
-            width: 30%;
-            background-color: lavender;
+        .search-filters {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25%;
+            height: 80%;
             padding: 20px;
-            height: auto; 
+            background-color: lavender;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
+            .search-filters h2 {
+                margin-top: 0;
             }
 
-        article {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 75vh;
-           
-        }
+            .search-filters label {
+                display: block;
+                margin-bottom: 10px;
+            }
 
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+            .search-filters input[type="text"] {
+                width: calc(100% - 10px);
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .search-filters button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: gold;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
 
         footer {
-            background-color: #123450;
-            padding: 10px 0;
             text-align: center;
-            color: white;
-            clear: both;
-        }
-
-    
-        form {
-            margin-bottom: 10px; 
-        }
-
-        label {
-            display: block; 
-            margin-bottom: 5px; 
-        }
-
-        input[type="text"],
-        button[type="button"] {
-            width: calc(100% - 10px); 
-            padding: 6px; 
-            margin-bottom: 5px;
-            box-sizing: border-box;
-            font-size: 14px; 
+            margin-top: auto;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
+    <div style="position: fixed; top: 5%; right: 42%; z-index: -1;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
+    </div>
+    <div style="position: fixed; top: 20%; right: 10%;z-index: -1;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
+    </div>
+    <div style="position: fixed; top: 30%; left: 15%;z-index: -1;">
+        <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
+    </div>
 
-
-    <section>
-
-
-        <nav>
- 
-            <ul>
-                <li></li>
-            </ul>
-            <form id="searchForm1">
-                <h1 style="font-size: 20px;">Temp High Reviews:</h1>
-                <label for="maxTemp1">Temp</label>
-                <input type="text" id="maxTemp1" name="maxTemp1">
-                <button type="button" onclick="submitForm()">Search</button>
+    <div style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 class="title">Custom Review Search</h1>
+        <h2 class="title" style="font-size: 25px">Customize what reviews you would like to see</h2>
+    </div>
+    <div class="container">
+        <div class="search-filters">
+            <form id="highTempForm">
+                <h2>High Temp</h2>
+                <input type="text" id="highTemp" name="highTemp" placeholder="Temp">
+                <button type="button" onclick="submitHighTemp()">Search</button>
             </form>
-            <form id="searchForm2">
-                <h1 style="font-size: 20px;">City-Season Reviews:</h1>
-                <label for="season">Season:</label>
-                <input type="text" id="season" name="season"><br>
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city"><br>
-                <button type="button" onclick="submitForm()">Search</button>
+            <form id="citySeasonForm">
+                <h2>City Season</h2>
+                <input type="text" id="city" name="city" placeholder="City">
+                <input type="text" id="season" name="season" placeholder="Season">
+                <button type="button" onclick="submitCitySeason()">Search</button>
             </form>
-            <form id="searchForm3">
-                <h1 style="font-size: 20px;">Temp Range Reviews:</h1>
-                <label for="minTemp">Min Temp</label>
-                <input type="text" id="trminTemp" name="trminTemp">
-                <label for="maxTemp">Max Temp</label>
-                <input type="text" id="trmaxTemp" name="trmaxTemp">
-                <button type="button" onclick="submitForm()">Search</button>
+            <form id="tempRangeForm">
+                <h2>Temp Range</h2>
+                <input type="text" id="tempMin" name="tempMin" placeholder="Temp Min">
+                <input type="text" id="tempMax" name="tempMax" placeholder="Temp Max">
+                <button type="button" onclick="submitTempRange()">Search</button>
             </form>
-        </nav>
+        </div>
+    </div>
 
-
-        <article style="font-size: 40px;">
-
-          <h1>Custom Search</h1> 
-          <p>(ReviewPlaceHolder)</p>
-
-
-        </article>
-
-    
-
-    </section>
-    <footer>
+    <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>
-
 </body>
 </html>
+
+

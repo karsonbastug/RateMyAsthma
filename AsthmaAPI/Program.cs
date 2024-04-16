@@ -2,6 +2,7 @@ using AsthmaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using AsthmaAPI.Repositories;
+using AsthmaAPI.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddScoped<IgetLocDetails, getLocDetails>();
 builder.Services.AddScoped<IAvgRPSByCity, AvgRatingPerSeasonByCity>();
 builder.Services.AddScoped<IGetTemp, GetTemp>();
 builder.Services.AddScoped<IGetLocRate, GetLocRate>();
+builder.Services.AddScoped<InsertReview, IRClass>();
+builder.Services.AddScoped<CityOld, COClass>();
 
 
 

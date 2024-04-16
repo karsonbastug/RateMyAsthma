@@ -16,6 +16,10 @@ namespace AsthmaAPI.Data
         public DbSet<RateByTemp> RateByTemp { get; set; }
         public DbSet <LocationRating> LocationRating { get; set; }
 
+        public DbSet<City2> Old { get; set; }
+
+        public DbSet <InsertR> InsertContext {  get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -27,6 +31,8 @@ namespace AsthmaAPI.Data
             modelBuilder.Entity<CitySeasonRating>().HasNoKey();
             modelBuilder.Entity<RateByTemp>().HasNoKey();
             modelBuilder.Entity<LocationRating>().HasNoKey();
+            modelBuilder.Entity<InsertR>().HasNoKey();
+            modelBuilder.Entity<City2>().HasNoKey();
         }
     }
 }

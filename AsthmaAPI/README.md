@@ -3,7 +3,7 @@
 ## /api/CityReview/{City}
 
 ### Purpose
-Retrieves ratings for a particular city
+Retrieves reviews that are within the past week for a desired City
 
 ### Inputs
 - {City}: The string that identifies your desired City
@@ -27,6 +27,35 @@ This asynchronous method retrieves a list of cities from a database using Entity
             var locations = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec GetCity1 @City;", param).ToListAsync()); 
             return locations;
         }
+```
+
+## /api/CityOld/{City}
+
+### Purpose
+This API is almost identical to the previous, but it returns reviews that are OLDER than a week for a particular City
+
+### Inputs
+- {City}: The string that identifies your desired City
+
+### Outputs
+Returns a list of all reviews for your given City, including the following:
+- int MaxTemp (the max of the temperature for the day reviewed)
+- int AvgTemp (the avg of the temperature for the day reviewed)
+- int MixTemp (the min of the temperature for the day reviewed)
+- int Rating (the rating for that day in that city) 
+- date DateTime (the date of the review for that city)
+
+### Sample Code
+
+This asynchronous method retrieves a list of cities from a database using Entity Framework Core by executing a stored procedure named "GetCity2" with a provided city parameter.
+
+```js
+        public async Task<List<City2>> AGetLocationOld(string City)
+        {
+            var param = new SqlParameter("@City", City);
+            var locations = await Task.Run(() => _dbContextClass.Old.FromSqlRaw("exec GetCity2 @City;", param).ToListAsync()); 
+            return locations;
+}
 ```
 ## /api/MaxReview/{MaxTemp}
 

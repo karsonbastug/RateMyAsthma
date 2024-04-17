@@ -1,7 +1,7 @@
 ﻿@page
 @model RateMyAsthma.Pages.ACustomSearchModel
 @{
-    var City = HttpContext.Request.Query["City"];
+    var MaxTemp = HttpContext.Request.Query["MaxTemp"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -87,11 +87,35 @@
         <h1 class="title">Custom Review Search</h1>
         <h2 class="title" style="font-size: 25px">Customize what reviews you would like to see</h2>
     </div>
+
+
+    <!-- MaxTemp Displayer -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">
+        <div class="title">
+            <p class="weather-info" style="font-size:30px;">
+                <span id="cityM" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Rating: </span>
+                <span id="cityCommentM" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Rating: </span>
+                <span id="cityRatingM" style="display:inline-block;"></span>
+                <span style="color: #123450;">| Temp: </span>
+                <span id="cityTempM" style="display:inline-block;"></span>
+                <span style="color: #123450;">| Date:</span>
+                <span id="cityDateM" style="display:inline-block;"></span>
+            </p>
+        </div>
+    </div>
+
+    <script type="module">
+        maxTempSearch('@MaxTemp');
+    </script>
+    <!--MaxTemp End -->
+
     <div class="container">
         <div class="search-filters">
             <form id="highTempForm">
                 <h2>High Temp</h2>
-                <input type="text" id="highTemp" name="highTemp" placeholder="Temp">
+                <input type="text" id="highTemp" name="highTemp" placeholder="Search for reviews when the temp was more than your input">
                 <button type="button" onclick="submitHighTemp()">Search</button>
             </form>
             <form id="citySeasonForm">

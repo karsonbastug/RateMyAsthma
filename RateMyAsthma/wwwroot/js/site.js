@@ -24,16 +24,16 @@ async function displayCityReviews(City) {
     document.getElementById('cityDate').style.visibility = "visible";
 }
 async function displayOldCityReviews(City) {
-    const response = await fetch(`https://localhost:7070/api/CityOld/Chicago
+    const response = await fetch(`https://localhost:7070/api/CityOld/${City}
 `);
     const data = await response.json();
-    document.getElementById('cityName').textContent = data[0].city;
-    document.getElementById('cityName').style.visibility = "visible";
-    document.getElementById('cityRating').textContent = data[0].rating;
-    document.getElementById('cityRating').style.visibility = "visible";
-    document.getElementById('cityComment').textContent = data[0].comment;
-    document.getElementById('cityComment').style.visibility = "visible";
-    document.getElementById('cityDate').textContent = data[0].date;
+    document.getElementById('cityNameO').textContent = data[0].city;
+    document.getElementById('cityNameO').style.visibility = "visible";
+    document.getElementById('cityRatingO').textContent = data[0].rating;
+    document.getElementById('cityRatingO').style.visibility = "visible";
+    document.getElementById('cityCommentO').textContent = data[0].comment;
+    document.getElementById('cityCommentO').style.visibility = "visible";
+    document.getElementById('cityDateO').textContent = data[0].date;
     document.getElementById('cityDate').style.visibility = "visible";
     document.getElementById('cityTemp').textContent = data[0].avgTemp;
     document.getElementById('cityTemp').style.visibility = "visible";
@@ -42,8 +42,35 @@ async function displayOldCityReviews(City) {
 
     const formattedDate = reviewDate.toLocaleDateString();
 
-    document.getElementById('cityDate').textContent = formattedDate;
-    document.getElementById('cityDate').style.visibility = "visible";
+    document.getElementById('cityDateO').textContent = formattedDate;
+    document.getElementById('cityDateO').style.visibility = "visible";
 }
 
 
+
+async function maxTempSearch(MaxTemp) {
+    const response = await fetch(`https://localhost:7070/api/MaxHealth/${MaxTemp}`);
+    const data = await response.json();
+    document.getElementById('cityM').textContent = data[0].city;
+    document.getElementById('cityM').style.visibility = "visible";
+    document.getElementById('cityTempM').textContent = data[0].maxTemp;
+    document.getElementById('cityTempM').style.visibility = "visible";
+    document.getElementById('cityRatingM').textContent = data[0].rating;
+    document.getElementById('cityRatingM').style.visibility = "visible";
+    document.getElementById('cityCommentM').textContent = data[0].comment;
+    document.getElementById('cityCommentM').style.visibility = "visible";
+    document.getElementById('cityDateM').textContent = data[0].date;
+    document.getElementById('cityDateM').style.visibility = "visible";
+
+
+    const reviewDate = new Date(data[0].date);
+
+    const formattedDate = reviewDate.toLocaleDateString();
+
+    document.getElementById('cityDateO').textContent = formattedDate;
+    document.getElementById('cityDateO').style.visibility = "visible";
+}
+function submitHighTemp() {
+    var highTempValue = document.getElementById('highTemp').value;
+    maxTempSearch(highTempValue);
+}

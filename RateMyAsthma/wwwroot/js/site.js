@@ -51,6 +51,11 @@ async function displayOldCityReviews(City) {
 async function maxTempSearch(MaxTemp) {
     const response = await fetch(`https://localhost:7070/api/MaxHealth/${MaxTemp}`);
     const data = await response.json();
+    if (document.getElementById('HighTempDisplayBox').style.display = ' none') {
+        document.getElementById('nullmContent').textContent = "Sorry, there are no results that match your search criteria."
+        document.getElementById('nullMessage').style.display = 'inline-block';
+
+    }
 
     const reviewDate = new Date(data[0].date);
     const formattedDate = reviewDate.toLocaleDateString();
@@ -60,6 +65,8 @@ async function maxTempSearch(MaxTemp) {
     document.getElementById('cityTempM').textContent = data[0].maxTemp;
     document.getElementById('cityDateM').textContent = formattedDate;
     document.getElementById('HighTempDisplayBox').style.display = 'inline-block';
+    document.getElementById('nullMessage').style.display = 'none';
+
 
 
     const reviewDate1 = new Date(data[1].date);

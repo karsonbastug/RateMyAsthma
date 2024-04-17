@@ -2,12 +2,12 @@
 ## Database Changes
 Our database had to be changed, so you will have to re-create the tables and re-insert their tables. The links to which are provided below:
 <br>
-[New Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
+[Database Table Changes](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
 <br>
-[New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
+[New Data Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
 <br>
 ## Stored Procedure Changes 
-Our stored procedures have udnergone A LOT of changes. You will be better off dropping all of them and re-creating, but don't worry! The links to which are provided below.
+Our stored procedures have udnergone A LOT of changes. You will have to drop the old ones and create our new ones, but don't worry! The links to which are provided below, which comments telling you whether you will have to drop and re-create or if its a new stored procedure you can just simply create.
 <br>
 [KarsonNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql)
 <br>
@@ -24,6 +24,8 @@ The database schema had to be changed. Because it involved changing Primary Keys
 [New Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
 
 [New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
+
+# Localhost Changes
 
 
 

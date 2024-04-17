@@ -96,7 +96,7 @@
     <!-- MaxTemp Displayer -->
     <div id="HighTempDisplayBox" style="position: relative; top: 100px; text-align:center; display: none;">
         <div class="title">
-            <p class="weather-info" style="font-size:30px">
+            <p class="weather-info" style="font-size:26px">
                 <span style="color: #123450;"> City: </span>
                 <span id="cityM" style="display:inline-block;"></span>
                 <span style="color: #123450;"> | Comment: </span>
@@ -112,7 +112,7 @@
     </div>
     <div id="HighTempDisplayBox1" style="position: relative; top: 100px; text-align:center;display: none;">
         <div class="title">
-            <p class="weather-info" style="font-size:30px">
+            <p class="weather-info" style="font-size:26px">
                 <span style="color: #123450;"> City: </span>
                 <span id="cityM1" style="display:inline-block;"></span>
                 <span style="color: #123450;"> | Comment: </span>
@@ -129,7 +129,7 @@
 
     <div id="HighTempDisplayBox2" style="position: relative; top: 100px; text-align:center;display: none;">
         <div class="title">
-            <p class="weather-info" style="font-size:30px">
+            <p class="weather-info" style="font-size:26px">
                 <span style="color: #123450;"> City: </span>
                 <span id="cityM2" style="display:inline-block;"></span>
                 <span style="color: #123450;"> | Comment: </span>
@@ -147,7 +147,7 @@
 
     <div id="HighTempDisplayBox3" style="position: relative; top: 100px; text-align:center;display: none;">
         <div class="title">
-            <p class="weather-info" style="font-size:30px">
+            <p class="weather-info" style="font-size:26px">
                 <span style="color: #123450;"> City: </span>
                 <span id="cityM3" style="display:inline-block;"></span>
                 <span style="color: #123450;"> | Comment: </span>
@@ -165,7 +165,7 @@
 
     <div id="HighTempDisplayBox4" style="position: relative; top: 100px; text-align:center;display: none;">
         <div class="title">
-            <p class="weather-info" style="font-size:30px">
+            <p class="weather-info" style="font-size:26px">
                 <span style="color: #123450;"> City: </span>
                 <span id="cityM4" style="display:inline-block;"></span>
                 <span style="color: #123450;"> | Comment: </span>
@@ -184,6 +184,109 @@
         maxTempSearch('@HighTemp');
     </script>
     <!--MaxTemp End -->
+    <!--SeasonCity-->
+    <div id="SeasonCityDisplayBox" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Season: </span>
+                <span id="avgSeason" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Average Rating During That Season: </span>
+                <span id="avgRate" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+    <script type="module">
+        avgRPSSearch('@City', '@Season');
+    </script>
+
+    <!--SeasonCity Fin-->
+    <!--TempRange Start-->
+    <div id="TempRangeDisplayBox" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Rating: </span>
+                <span id="trRating" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Date: </span>
+                <span id="trDate" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="trCity" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | State: </span>
+                <span id="trState" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="TempRangeDisplayBox1" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Rating: </span>
+                <span id="trRating1" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Date: </span>
+                <span id="trDate1" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="trCity1" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | State: </span>
+                <span id="trState1" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="TempRangeDisplayBox2" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Rating: </span>
+                <span id="trRating2" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Date: </span>
+                <span id="trDate2" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="trCity2" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | State: </span>
+                <span id="trState2" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="TempRangeDisplayBox3" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Rating: </span>
+                <span id="trRating3" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Date: </span>
+                <span id="trDate3" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="trCity3" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | State: </span>
+                <span id="trState3" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="TempRangeDisplayBox4" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <span style="color: #123450;"> Rating: </span>
+                <span id="trRating4" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Date: </span>
+                <span id="trDate4" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="trCity4" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | State: </span>
+                <span id="trState4" style="display:inline-block;"></span>
+
+            </p>
+        </div>
+    </div>
+
+    <script type="module">
+        tempRangeSearch('@MinTemp', '@MaxTemp');
+    </script>
+
+    <!--TempRange Fin-->
 
     <div class="container">
         <div class="search-filters">
@@ -209,9 +312,7 @@
 
 
 
-    <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
-        <a href="AMain" class="btn bg-warning text-white">Return</a>
-    </footer>
+
     <script>
 
         function submitHighTemp() {
@@ -236,6 +337,13 @@
             window.location.href = threeUrl;
         }
     </script>
+
+
+    <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
+        <a href="AMain" class="btn bg-warning text-white">Return</a>
+    </footer>
+
+
 </body>
 </html>
 

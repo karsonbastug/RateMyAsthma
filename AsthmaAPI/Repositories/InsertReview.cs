@@ -6,6 +6,6 @@ namespace AsthmaAPI.Repositories
 {
     public interface InsertReview
     {
-        public Task<List<InsertR>> AInsertReview(string Comment, int Rating, string City);
+        public Task<List<InsertR>> InsertReview(int Rating, string Comment, string City);
     }
 }

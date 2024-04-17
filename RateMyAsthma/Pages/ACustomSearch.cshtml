@@ -2,6 +2,10 @@
 @model RateMyAsthma.Pages.ACustomSearchModel
 @{
     var MaxTemp = HttpContext.Request.Query["MaxTemp"];
+    var MinTemp = HttpContext.Request.Query["MinTemp"];
+    var City = HttpContext.Request.Query["City"];
+    var Season = HttpContext.Request.Query["Season"];
+    var HighTemp = HttpContext.Request.Query["HighTemp"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -107,35 +111,61 @@
     </div>
 
     <script type="module">
-        maxTempSearch('@MaxTemp');
+        maxTempSearch('@HighTemp');
     </script>
     <!--MaxTemp End -->
 
     <div class="container">
         <div class="search-filters">
-            <form id="highTempForm">
+            <form id="highTempForm" onsubmit="submitHighTemp()">
                 <h2>High Temp</h2>
-                <input type="text" id="highTemp" name="highTemp" placeholder="Search for reviews when the temp was more than your input">
-                <button type="button" onclick="submitHighTemp()">Search</button>
+                <input type="text" id="highTemp" name="HighTemp" placeholder="Search for reviews when the temp was more than your input">
+                <button id="htempbtn" type="submit" onclick="submitHighTemp()">Search</button>
             </form>
-            <form id="citySeasonForm">
+            <form id="citySeasonForm" onsubmit="submitCitySeason()">
                 <h2>City Season</h2>
-                <input type="text" id="city" name="city" placeholder="City">
-                <input type="text" id="season" name="season" placeholder="Season">
-                <button type="button" onclick="submitCitySeason()">Search</button>
+                <input type="text" id="incity" name="City" placeholder="City">
+                <input type="text" id="inseason" name="Season" placeholder="Season">
+                <button id="cityseasonbtn" type="submit" onclick="submitCitySeason()">Search</button>
             </form>
-            <form id="tempRangeForm">
+            <form id="tempRangeForm" onclick="submitTempRange()">
                 <h2>Temp Range</h2>
-                <input type="text" id="tempMin" name="tempMin" placeholder="Temp Min">
-                <input type="text" id="tempMax" name="tempMax" placeholder="Temp Max">
-                <button type="button" onclick="submitTempRange()">Search</button>
+                <input type="text" id="tempMin" name="MinTemp" placeholder="Temp Min">
+                <input type="text" id="tempMax" name="MaxTemp" placeholder="Temp Max">
+                <button id="trangebtn" type="submit" onclick="submitTempRange()">Search</button>
             </form>
         </div>
     </div>
 
+
+
     <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>
+    <script>
+
+        function submitHighTemp() {
+
+            var htval = document.getElementById('highTemp').value;
+            var newUrl = window.location.origin + window.location.pathname + '?highTemp=' + htval;
+            window.location.href = newUrl;
+
+        }
+
+        function submitCitySeason() {
+            var cval = document.getElementById('incity').value;
+            var sval = document.getElementById('inseason').value;
+            var twoUrl = window.location.origin + window.location.pathname + '?City=' + incity + "&Season=" + inseason;
+            window.location.href = twoUrl;
+        }
+
+        function submitTempRange() {
+            var minval = document.getElementById('tempMin').value;
+            var maxval = document.getElementById('tempMax').value;
+            var threeUrl = window.location.origin + window.location.pathname + '?MinTemp=' + minval + "&MaxTemp=" + max;
+            window.location.href = threeUrl;
+        }
+    </script>
 </body>
 </html>
 

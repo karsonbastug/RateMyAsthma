@@ -25,6 +25,8 @@ The database schema had to be changed. Because it involved changing Primary Keys
 
 [New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
 
+# Localhost Changes
+
 
 
 

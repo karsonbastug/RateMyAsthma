@@ -1,3 +1,12 @@
+# Changes for Joshua Meadows
+## Database Changes
+Our database had to be changed, so you will have to re-create the tables and re-insert their tables. The links to which are provided below:
+<br>
+[New Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
+<br>
+[New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
+
+
 # Changes for Chase/Noah
 
 ## Database Changes

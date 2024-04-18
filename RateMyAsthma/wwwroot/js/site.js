@@ -120,15 +120,27 @@ async function maxTempSearch(MaxTemp) {
 async function avgRPSSearch(City, Season) {
     const response = await fetch(`https://localhost:7070/api/CitySeasonRating/${City}/${Season}`);
     const data = await response.json();
+    if (document.getElementById('HighTempDisplayBox').style.display = ' none') {
+        document.getElementById('nullmContent').textContent = "Sorry, there are no results that match your search criteria."
+        document.getElementById('nullMessage').style.display = 'inline-block';
+
+    }
+
     document.getElementById('avgSeason').textContent = data[0].season;
     document.getElementById('avgRate').textContent = data[0].averageRating;
     document.getElementById('SeasonCityDisplayBox').style.display = 'inline-block';
+    document.getElementById('nullMessage').style.display = 'none';
 
 }
 
 async function tempRangeSearch(MinTemp, MaxTemp) {
     const response = await fetch(`https://localhost:7070/api/Temp/${MinTemp}/${MaxTemp}`);
     const data = await response.json();
+    if (document.getElementById('HighTempDisplayBox').style.display = ' none') {
+        document.getElementById('nullmContent').textContent = "Sorry, there are no results that match your search criteria."
+        document.getElementById('nullMessage').style.display = 'inline-block';
+
+    }
     const reviewDate = new Date(data[0].date);
     const formattedDate = reviewDate.toLocaleDateString();
 
@@ -143,6 +155,7 @@ async function tempRangeSearch(MinTemp, MaxTemp) {
     document.getElementById('trCity').textContent = data[0].city;
     document.getElementById('trState').textContent = data[0].state;
     document.getElementById('TempRangeDisplayBox').style.display = 'inline-block';
+    document.getElementById('nullMessage').style.display = 'none';
 
     const reviewDate1 = new Date(data[1].date);
     const formattedDate1 = reviewDate1.toLocaleDateString();

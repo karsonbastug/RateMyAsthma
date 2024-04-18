@@ -89,7 +89,7 @@ This asynchronous method retrieves a list of reviews from a database using Entit
 # Chase Baker's APIs
 
 ## /api/getLocDetails/{City}
-!!Important!! 
+!!Important!! - Unused in Final Product
 This action only calls data for the current date. Even when working, if a new datapoint has not been added to the DB with the date of whenever you run this action, it will return a blank "[]" - that is intentional. 
 
 !! Ensure SPs "spgetLocDetails" and "avgRatePerSeasonInCity" are in your version of the database
@@ -119,6 +119,8 @@ Returns a list of basic weather data from the database for the given city:
         }
 
 ## /api/AvgRatingPerSeasonByCity/{City}/{Season}
+On the website, to get an actual result and not a "sorry no results found for your search" message, use city Chicago, and season Spring. 
+There are others, but to save you the time of finding them. You can, of course, make your own when you write a review, however.
 
 ### Purpose 
 Given a city and a season, returns the average ratings for that city during that season throughout all time.

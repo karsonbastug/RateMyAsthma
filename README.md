@@ -18,8 +18,8 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 ## Assignment 5 - Who Did What?
 
 ### Karson Bastug
-   - Link 1
-   - Link 2
+   - [AMainWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AMain.cshtml)
+   - [ATodayWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AToday.cshtml)
      
 <br>
 
@@ -30,8 +30,8 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 <br>
 
 ### Noah Stalnaker
-   - Link 1
-   - Link 2
+   - [AAboutWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AAbout.cshtml)
+   - [ATodayWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AToday.cshtml)
      
 
 

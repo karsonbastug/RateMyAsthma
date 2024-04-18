@@ -127,7 +127,21 @@
             </ul>
         </div>
     </div>
+    <script>
 
+        function getRandomTemperature() {
+            return Math.floor(Math.random() * (77 - 65 + 1)) + 65;
+        }
+
+
+        document.getElementById("mondayTemp").innerText = getRandomTemperature();
+        document.getElementById("tuesdayTemp").innerText = getRandomTemperature();
+        document.getElementById("wednesdayTemp").innerText = getRandomTemperature();
+        document.getElementById("thursdayTemp").innerText = getRandomTemperature();
+        document.getElementById("fridayTemp").innerText = getRandomTemperature();
+        document.getElementById("saturdayTemp").innerText = getRandomTemperature();
+        document.getElementById("sundayTemp").innerText = getRandomTemperature();
+    </script>
     <footer style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>

@@ -17,7 +17,7 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 
 <br>
 <br>
-<---------------------------------------------------------------------------------------------------------------------------------------------->
+<--------------------------------------------------------------------------------------------------------------------->
 
 # Project Guide
 
@@ -32,15 +32,14 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 5. Note For Developer
 6. API Documentaiton
 
-<---------------------------------------------------------------------------------------------------------------------------------------------->
-
+<--------------------------------------------------------------------------------------------------------------------->
 # 1. Project Intro and Status
 This website was created by Chase Baker, Karson Bastug, and Noah Stalnaker for MIST 353 at West Virginia University in Spring of 2024. As of April 2024, it is not no longer being worked on.
 
 # 2. Project Overview
 Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Server Management to create a website where users rate how bad their asthma was in certain cities across the United States. Users can leave reviews, or customize what other reviews they see. By allowing users to rate and see other reviews on how bad their asthma was in certain cities, users can better plan to manage their health and happiness.
 
-<---------------------------------------------------------------------------------------------------------------------------------------------->
+<--------------------------------------------------------------------------------------------------------------------->
 
 # 3. Deployment Guide
 
@@ -78,7 +77,7 @@ Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Serve
 2. Dependent on your local machine if not running a VM
 3. Make sure to configure files in the right order (Pages first, then API)
 
-<---------------------------------------------------------------------------------------------------------------------------------------------->
+<--------------------------------------------------------------------------------------------------------------------->
 
 # 4. Note For Developers
 
@@ -91,7 +90,7 @@ For anyone interested in working on this/taking it over, its important to consid
 3. Adding a username/password system so people can keep track of their own reviews
      - Be mindful of privacy, as you are using health data
 
-<---------------------------------------------------------------------------------------------------------------------------------------------->
+<--------------------------------------------------------------------------------------------------------------------->
 
 # 5. API Documentation
 [Link to API Documentation](AsthmaAPI/README.md)

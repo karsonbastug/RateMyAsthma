@@ -15,34 +15,104 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 <br>
 [NoahNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/NoahStalnakerSps.sql)
 
-# Changes for Chase/Noah
+## Assignment 5 - Who Did What?
 
-## Database Changes
+### Karson Bastug
+   - Link 1
+   - Link 2
+     
+<br>
 
-The database schema had to be changed. Because it involved changing Primary Keys, the tables will have to be remade. In the links below I added the code, just simply run the drop table in the ordered listed, then rebuild the tables, and re-insert the data. There is also a lot of new data to be inserted. Additionnaly, if any of your SP run the line (table).WID, the .WID needs to be changed to .LID.
+### Chase Baker
+   - Link 1
+   - Link 2
+     
+<br>
 
-[New Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
-
-[New Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
-
-# Localhost Changes
-
-
+### Noah Stalnaker
+   - Link 1
+   - Link 2
+     
 
 
 <br>
 <br>
+<--------------------------------------------------------------------------------------------------------------------->
 
+# Project Guide
 
+1. Project Intro and Status
+2. Project Overview
+3. Deployment Guide
+   - Setting up the Database
+   - Cloning the Repository
+   - Configuring the Application
+   - Testing and Troubleshooting
+   - Pitfalls
+5. Note For Developer
+6. API Documentaiton
 
+<--------------------------------------------------------------------------------------------------------------------->
+# 1. Project Intro and Status
+This website was created by Chase Baker, Karson Bastug, and Noah Stalnaker for MIST 353 at West Virginia University in Spring of 2024. As of April 2024, it is not no longer being worked on.
 
-## [Project Proposal](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Proposal.md)
+# 2. Project Overview
+Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Server Management to create a website where users rate how bad their asthma was in certain cities across the United States. Users can leave reviews, or customize what other reviews they see. By allowing users to rate and see other reviews on how bad their asthma was in certain cities, users can better plan to manage their health and happiness.
 
-## [API Documentation](AsthmaAPI/README.md)
+<--------------------------------------------------------------------------------------------------------------------->
 
-### Karson Bastug SP Change Notice
-There has been an additional Stored Procedure created, named GetCity1. Additionally, GetRatingsForHighTemp has been modified. You will have to drop then recreate the stored procedure, which that command is commented out to make it easy.
+# 3. Deployment Guide
 
-[NewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql)
+## Setting up the Database
+
+1. We all created separate stored proecdures, all of which will need to be made. But first, connect to the SQL Server instance on the VM using SQL Server Management Studio (SSMS).
+   - Create a new database for your application, and name is "Asthma"
+   - [SQL Tables For Database](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
+   - [SQL Data For Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
+   - [KarsonNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql)
+   - [ChaseNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/ChaseBakerSps.sql)
+   - [NoahNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/NoahStalnakerSps.sql)
+
+## Cloning the Repository
+
+1. Clone the repository of your Visual Studio website to your local machine.
+   - Ensure the repository includes necessary files.
+
+## Configuring the Application
+
+1. Update the database connection string in the application's configuration files.
+   - Make any other necessary configuration changes.
+
+## Testing and Troubleshooting
+
+1. Access the application URL in a web browser.
+   - Test all functionality, including database interactions.
+   - Monitor logs and error messages for issues.
+   - Seek help from online resources if needed.
+
+## Pitfalls
+
+1. Make sure everything is copied 1-1 except the connection strings
+   - Pay close attention to the stored procedures and their entity tables, any modification to the SP select statement and it will not work
+2. Dependent on your local machine if not running a VM
+3. Make sure to configure files in the right order (Pages first, then API)
+
+<--------------------------------------------------------------------------------------------------------------------->
+
+# 4. Note For Developers
+
+For anyone interested in working on this/taking it over, its important to consider:
+1. The cities users are able to review are dependent on if they are in the database
+     - The "request a city" button does not store that information anywhere
+     - Consider allowing users to input a city, or use an external API
+2. There is a hard coded limit on how many reviews can be displayed (5)
+     - Consider exploring options like displaying reviews with a drop down, displaying 1 reivew at a time with an option for a next arrow, etc.
+3. Adding a username/password system so people can keep track of their own reviews
+     - Be mindful of privacy, as you are using health data
+
+<--------------------------------------------------------------------------------------------------------------------->
+
+# 5. API Documentation
+[Link to API Documentation](AsthmaAPI/README.md)
 
 

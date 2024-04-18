@@ -10,10 +10,10 @@ namespace AsthmaAPI.Entities
     {
         [Key]
 
-        public string? Comment { get; set; }
-        public string? City {  get; set; }
-        public int? MaxTemp {  get; set; }
-        public int? AvgTemp {  get; set; }
+        public string? UserComment { get; set; }
+        public string? City { get; set; }
+        public int? MaxTemp { get; set; }
+        public int? AvgTemp { get; set; }
         public int? MinTemp { get; set; }
         public int? Rating { get; set; }
         public DateTime? Date { get; set; }

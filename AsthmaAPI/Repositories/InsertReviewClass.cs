@@ -16,12 +16,12 @@ namespace AsthmaAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<InsertR>> InsertReview(int Rating, string Comment, string City)
+        public async Task<List<InsertR>> InsertReview(int Rating, string UserComment, string City)
         {
             var paramB = new SqlParameter("@Rating", Rating);
-            var paramA = new SqlParameter("@Comment", Comment);
+            var paramA = new SqlParameter("@UserComment", UserComment);
             var paramC = new SqlParameter("@City", City);
-            var areview = await Task.Run(() => _dbContextClass.InsertContext.FromSqlRaw("exec InsertReview  @Rating, @Comment, @City;", paramB, paramA, paramC).ToListAsync());
+            var areview = await Task.Run(() => _dbContextClass.InsertContext.FromSqlRaw("exec InsertReview  @Rating, @UserComment, @City;", paramB, paramA, paramC).ToListAsync());
             return areview;
         }
     }

@@ -18,10 +18,10 @@ namespace AsthmaAPI.Controllers
             this.bService = bService;
         }
 
-        [HttpGet("{Rating}/{Comment}/{City}")]
-        public async Task<List<InsertR>> InsertReview(int Rating, string Comment, string City)
+        [HttpGet("{Rating}/{UserComment}/{City}")]
+        public async Task<List<InsertR>> InsertReview(int Rating, string UserComment, string City)
         {
-            var iD = await bService.InsertReview(Rating, Comment, City);
+            var iD = await bService.InsertReview(Rating, UserComment, City);
             if (iD == null)
             {
                 //return NotFound();

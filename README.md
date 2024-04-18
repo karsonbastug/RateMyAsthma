@@ -65,7 +65,7 @@ Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Serve
 
 ## Setting up the Database
 
-1. We all created separate stored proecdures, all of which will need to be made. But first, connect to the SQL Server instance on the VM using SQL Server Management Studio (SSMS).
+1. We all created separate stored procedures, all of which will need to be made. First, however, connect to the SQL Server instance on the VM using SQL Server Management Studio (SSMS).
    - Create a new database for your application, and name is "Asthma"
    - [SQL Tables For Database](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
    - [SQL Data For Tables](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)

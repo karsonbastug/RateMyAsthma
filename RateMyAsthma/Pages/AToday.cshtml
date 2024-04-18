@@ -103,13 +103,13 @@
                 </p>
             </div>
         </div>
-        <button id="nextReviewBtn" class="btn bg-warning text-white"style="left: 43%; top: 350px;;">Next Review</button>
+        <button id="nextReviewBtn" class="btn bg-warning text-white" style="left: 43%; top: 350px;">Next Review</button>
         <script>
             let i = 0;
-            let clickCount = 0; 
+            let clickCount = 0;
 
             function increaseIndex() {
-                clickCount++; 
+                clickCount++;
                 i = clickCount;
                 displayCityReviews('@City');
             }
@@ -121,7 +121,7 @@
                 const data = await response.json();
                 document.getElementById('cityName').textContent = data[i].city;
                 document.getElementById('cityRating').textContent = data[i].rating;
-                document.getElementById('cityComment').textContent = data[i].comment;
+                document.getElementById('cityComment').textContent = data[i].userComment;
                 document.getElementById('cityDate').textContent = data[i].date;
                 document.getElementById('cityTemp').textContent = data[i].avgTemp;
 

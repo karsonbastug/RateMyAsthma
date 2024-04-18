@@ -10,7 +10,7 @@ namespace AsthmaAPI.Entities
     {
         [Key]
 
-        public string? Comment { get; set; }
+        public string? UserComment { get; set; }
         public string? City {  get; set; }
         public int? MaxTemp {  get; set; }
         public int? AvgTemp {  get; set; }

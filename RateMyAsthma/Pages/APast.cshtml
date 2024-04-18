@@ -87,32 +87,59 @@
     </div>
 
     <div style="position: fixed; top: 140px; left: 50%; transform: translate(-50%, -50%);">
-        <h1 class="title" style="font-size: 60px;">This week's forecast and past reviews for <span id="cityNameO" class="title" style="visibility: visible; font-size: 60px;"></span></h1>
+        <h1 class="title" style="font-size: 60px;">Previous week's forecast and reviews for <span id="cityName" class="title" style="visibility: visible; font-size: 60px;"></span></h1>
 
 
-        <div style="position: absolute; top: 260px; left: 50%; transform: translateX(-50%);">
+        <div style="position: absolute; top: 180%; left: 50%; transform: translateX(-50%);">
             <div class="title">
                 <p class="weather-info">
-                    <span id="cityCommentO" style="display:inline-block;"></span>
+                    <span id="cityComment" style="display:inline-block;"></span>
                     <span style="color: #123450;"> | Rating: </span>
-                    <span id="cityRatingO" style="display:inline-block;"></span>
+                    <span id="cityRating" style="display:inline-block;"></span>
                     <span style="color: #123450;">| Temp: </span>
-                    <span id="cityTempO" style="display:inline-block;"></span>
+                    <span id="cityTemp" style="display:inline-block;"></span>
                     <span style="color: #123450;">| Date:</span>
-                    <span id="cityDateO" style="display:inline-block;"></span>
+                    <span id="cityDate" style="display:inline-block;"></span>
                 </p>
-
-
-
             </div>
         </div>
+        <button id="nextReviewBtn1" class="btn bg-warning text-white" style="left: 43%; top: 350px;">Next Review</button>
+        <script>
+            let i = 0;
+            let clickCount = 0;
+
+            function increaseIndex1() {
+                clickCount++;
+                i = clickCount;
+                displayOldCityReviews('@City');
+            }
+
+            document.getElementById('nextReviewBtn1').addEventListener('click', increaseIndex1);
+
+            async function displayOldCityReviews(City) {
+                const response = await fetch(`https://localhost:7070/api/CityOld/${City}`);
+                const data = await response.json();
+                document.getElementById('cityName').textContent = data[i].city;
+                document.getElementById('cityName').style.visibility = "visible";
+                document.getElementById('cityRating').textContent = data[i].rating;
+                document.getElementById('cityComment').textContent = data[i].userComment;
+                document.getElementById('cityDate').textContent = data[i].date;
+                document.getElementById('cityTemp').textContent = data[i].avgTemp;
+
+                const reviewDate = new Date(data[i].date);
+                const formattedDate = reviewDate.toLocaleDateString();
+                document.getElementById('cityDate').textContent = formattedDate;
+            }
+
+        </script>
+
+
 
 
 
         <script type="module">
             displayOldCityReviews('@City');
         </script>
-
 
         <div class="left-color">
             <ul>
@@ -132,7 +159,6 @@
         function getRandomTemperature() {
             return Math.floor(Math.random() * (77 - 65 + 1)) + 65;
         }
-
 
         document.getElementById("mondayTemp").innerText = getRandomTemperature();
         document.getElementById("tuesdayTemp").innerText = getRandomTemperature();

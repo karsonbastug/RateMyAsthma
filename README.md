@@ -24,8 +24,8 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 <br>
 
 ### Chase Baker
-   - Link 1
-   - Link 2
+   - [ACustomSearchWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/ACustomSearch.cshtml)
+   - [AReviewWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AReview.cshtml)
      
 <br>
 

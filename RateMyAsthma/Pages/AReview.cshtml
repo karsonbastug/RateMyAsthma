@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link href='~/css/bootstrapMorph.min.css' rel="stylesheet" type="text/css" />
-    <title>Submit Review</title>
+    <titl id="ogtitle">Submit Review</titl>
 
     <style>
         body {
@@ -69,7 +69,9 @@
         <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
     </div>
 
-    <h1 style="color: #123450">Submit a review for <span id="cityHeader">@City</span> on <span id="currentDate"></span></h1>
+    <div id="srheader">
+        <h1 style="color: #123450">Submit a review for <span id="cityHeader">@City</span> on <span id="currentDate"></span></h1>
+    </div>
 
     <form id="InsertReviewForm" onsubmit="submitInsRev()">
         <div class="form-group">
@@ -129,9 +131,9 @@
 
 
 
-    <footer style="display: flex; justify-content: center;">
+    <div style=" position: relative; text-align: center; top 500px">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
-    </footer>
+    </div>
     <script>
 
         var currentDate = new Date();

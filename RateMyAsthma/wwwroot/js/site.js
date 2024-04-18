@@ -203,6 +203,10 @@ async function subInsRev(Rating, UserComment, City) {
     document.getElementById('inrevCity').textContent = data[0].city;
     document.getElementById('InsertedRevDisplayBox').style.display = 'inline-block';
     document.getElementById('InsertReviewForm').style.display = 'none';
+    document.getElementById('ogtitle').style.display = 'none';
+    document.getElementById('srheader').style.display = 'none';
+
+
 
 
 

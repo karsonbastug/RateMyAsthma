@@ -15,6 +15,26 @@ Our stored procedures have udnergone A LOT of changes. You will have to drop the
 <br>
 [NoahNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/NoahStalnakerSps.sql)
 
+## Assignment 5 - Who Did What?
+
+### Karson Bastug
+   - Link 1
+   - Link 2
+     
+<br>
+
+### Chase Baker
+   - Link 1
+   - Link 2
+     
+<br>
+
+### Noah Stalnaker
+   - Link 1
+   - Link 2
+     
+
+
 <br>
 <br>
 <--------------------------------------------------------------------------------------------------------------------->

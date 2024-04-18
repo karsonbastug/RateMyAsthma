@@ -2,6 +2,8 @@
 @model RateMyAsthma.Pages.AReviewModel
 @{
     var City = HttpContext.Request.Query["City"];
+    var Rating = HttpContext.Request.Query["Rating"];
+    var UserComment = HttpContext.Request.Query["UserComment"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -67,28 +69,71 @@
         <img src="~/lib/cloud-computing.png" alt="A graphic of a cloud" style="width: 300px; height: 300px;">
     </div>
 
-    <h1 style="color: #123450">Submit a review for <span id ="cityHeader">@City</span> on <span id="currentDate"></span></h1>
+    <h1 style="color: #123450">Submit a review for <span id="cityHeader">@City</span> on <span id="currentDate"></span></h1>
 
-    <form action="/submit" method="post">
+    <form id="InsertReviewForm" onsubmit="submitInsRev()">
         <div class="form-group">
             <label for="comment" style="color: #123456">Comment:</label>
-            <textarea id="comment" name="comment" rows="4" cols="50" class="form-control"></textarea>
+            <input type="text" id="incomment" name="UserComment" rows="4" cols="50" class="form-control"></input>
         </div>
         <div class="form-group">
             <label for="rating" , style="color: #123456">Rating (1-10):</label>
-            <input type="number" id="rating" name="rating" min="1" max="10" class="form-control">
+            <input type="number" id="inrating" name="Rating" min="1" max="10" class="form-control">
         </div>
         <div class="form-group">
-            <label for="temperature" , style="color: #123456">High Temperature (°F):</label>
-            <input type="text" id="temperature" name="temperature" class="form-control" placeholder="Enter high temperature for the day">
+            <label for="city" , style="color: #123456">City:</label>
+            <input type="text" id="incity" name="City" class="form-control" placeholder="Enter the city your review is for">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" onclick="submitInsRev()" class="btn btn-primary">Submit</button>
     </form>
+
+
+
+
+
+
+    <div id="InsertedRevDisplayBox" style="position: relative; top: 100px; text-align:center; display: none;">
+        <div class="title">
+            <p class="weather-info" style="font-size:26px">
+                <h1 style="position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%);" class="title">Submission Successful!</h1>
+                <span style="color: #123450;"> Your Rating: </span>
+                <span id="inrevRating" style="display:inline-block;"></span>
+                <span style="color: #123450;"> | Your Comment: </span>
+                <span id="inrevComment" style="display:inline-block;"></span>
+                <span style="color: #123450;"> City: </span>
+                <span id="inrevCity" style="display:inline-block;"></span>
+
+
+            </p>
+        </div>
+    </div>
+
+
+    <script type="module">
+        subInsRev('@Rating', '@UserComment', '@City');
+    </script>
+
+
+    <script>
+
+        function submitInsRev() {
+            var rval = document.getElementById('inrating').value;
+            var coval = document.getElementById('incomment').value;
+            var cival = document.getElementById('incity').value;
+            var Url = window.location.origin + window.location.pathname + '?Rating=' + incity + "&UserComment=" + inseason + "&City=";
+            window.location.href = Url;
+        }
+
+    </script>
+
+
+
+
     <footer style="display: flex; justify-content: center;">
         <a href="AMain" class="btn bg-warning text-white">Return</a>
     </footer>
     <script>
- 
+
         var currentDate = new Date();
 
         var formattedDate = currentDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });

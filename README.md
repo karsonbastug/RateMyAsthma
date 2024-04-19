@@ -26,6 +26,7 @@ Our stored procedures have undergone A LOT of changes. You will have to drop the
 ### Chase Baker
    - [ACustomSearchWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/ACustomSearch.cshtml)
    - [AReviewWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AReview.cshtml)
+   - WebPage success across the entire website hinges on using data within our database. When prompted for City at any point, Chicago would be a good one to use!
      
 <br>
 

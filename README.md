@@ -92,7 +92,7 @@ Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Serve
 
 ## Pitfalls
 
-1. Make sure everything is copied 1-1 except the connection strings
+1. Make sure everything is copied 1:1 except the connection strings
    - Pay close attention to the stored procedures and their entity tables, any modification to the SP select statement and it will not work
 2. Dependent on your local machine if not running a VM
 3. Make sure to configure files in the right order (Pages first, then API)
@@ -106,7 +106,7 @@ For anyone interested in working on this/taking it over, its important to consid
      - The "request a city" button does not store that information anywhere
      - Consider allowing users to input a city, or use an external API
 2. There is a hard coded limit on how many reviews can be displayed (5)
-     - Consider exploring options like displaying reviews with a drop down, displaying 1 reivew at a time with an option for a next arrow, etc.
+     - Consider exploring options like displaying reviews with a drop down, displaying 1 review at a time with an option for a next arrow, etc.
 3. Adding a username/password system so people can keep track of their own reviews
      - Be mindful of privacy, as you are using health data
 

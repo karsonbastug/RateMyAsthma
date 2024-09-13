@@ -1,39 +1,3 @@
-# Changes for Joshua Meadows
-## Database Changes
-Our database had to be changed, so you will have to re-create the tables and re-insert their tables. The links to which are provided below:
-<br>
-[Database Table Changes](https://github.com/karsonbastug/Assignment3/blob/main/FinalDatabaseCreation.sql)
-<br>
-[New Data Entries](https://github.com/karsonbastug/Assignment3/blob/main/FinalDataInsert.sql)
-<br>
-## Stored Procedure Changes 
-Our stored procedures have undergone A LOT of changes. You will have to drop the old ones and create our new ones, but don't worry! The links to which are provided below, which comments telling you whether you will have to drop and re-create or if its a new stored procedure you can just simply create.
-<br>
-[KarsonNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/KarsonBastugSps.sql)
-<br>
-[ChaseNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/ChaseBakerSps.sql)
-<br>
-[NoahNewStoredProcedures](https://github.com/karsonbastug/Assignment3/blob/main/NoahStalnakerSps.sql)
-
-## Assignment 5 - Who Did What?
-
-### Karson Bastug
-   - [AMainWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AMain.cshtml)
-   - [ATodayWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AToday.cshtml)
-     
-<br>
-
-### Chase Baker
-   - [ACustomSearchWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/ACustomSearch.cshtml)
-   - [AReviewWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AReview.cshtml)
-   - WebPage success across the entire website hinges on using data within our database. When prompted for City at any point, Chicago would be a good one to use!
-     
-<br>
-
-### Noah Stalnaker
-   - [AAboutWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AAbout.cshtml)
-   - [ATodayWebPage](https://github.com/karsonbastug/RateMyAsthma/blob/master/RateMyAsthma/Pages/AToday.cshtml)
-     
 
 
 <br>

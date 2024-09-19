@@ -12,14 +12,29 @@
 5. Note For Developer
 6. API Documentaiton
 
-<--------------------------------------------------------------------------------------------------------------------->
 # 1. Project Intro and Status
 This website was created by Chase Baker, Karson Bastug, and Noah Stalnaker for MIST 353 at West Virginia University in Spring of 2024. As of April 2024, it is no longer being worked on.
 
-# 2. Project Overview
+## 2. Project Overview 
 Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Server Management to create a website where users rate how bad their asthma was in certain cities across the United States. Users can leave reviews, or customize what other reviews they see. By allowing users to rate and see other reviews on how bad their asthma was in certain cities, users can better plan to manage their health and happiness.
 
-<--------------------------------------------------------------------------------------------------------------------->
+## Project Preview - Main Home Page and Searching for a City
+<img width="843" alt="image" src="https://github.com/user-attachments/assets/40990ab8-d5c2-45c3-9eca-64af291309d0">
+
+<img width="843" alt="image" src="https://github.com/user-attachments/assets/3863444d-0db8-4b94-811c-ce8d2b90efcd">
+
+## Viewing forecast for chosen city for the given week
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/e8e7282e-2efc-4484-97c3-1f6cfcba77fb">
+
+## Submitting a review for chosen city
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/e1541ca4-0787-4904-9c53-9fc728b3f86b">
+
+
+
+
+
+
+
 
 # 3. Deployment Guide
 
@@ -57,7 +72,7 @@ Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Serve
 2. Dependent on your local machine if not running a VM
 3. Make sure to configure files in the right order (Pages first, then API)
 
-<--------------------------------------------------------------------------------------------------------------------->
+
 
 # 4. Note For Developers
 
@@ -70,7 +85,7 @@ For anyone interested in working on this/taking it over, its important to consid
 3. Adding a username/password system so people can keep track of their own reviews
      - Be mindful of privacy, as you are using health data
 
-<--------------------------------------------------------------------------------------------------------------------->
+
 
 # 5. API Documentation
 [Link to API Documentation](AsthmaAPI/README.md)

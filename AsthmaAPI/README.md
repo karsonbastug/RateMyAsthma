@@ -3,7 +3,7 @@
 ## /api/CityReview/{City}
 
 ### Purpose
-Retrieves reviews that are within the past week for a desired City
+Retrieves reviews that are within the past week for a desired City.
 
 ### Inputs
 - {City}: The string that identifies your desired City

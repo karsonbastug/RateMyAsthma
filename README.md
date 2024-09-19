@@ -15,7 +15,7 @@
 # 1. Project Intro and Status
 This website was created by Chase Baker, Karson Bastug, and Noah Stalnaker for MIST 353 at West Virginia University in Spring of 2024.
 
-## 2. Project Overview 
+# 2. Project Overview 
 Our website, titled "Rate My Asthma", utilizes MS Visual Studio and MS SQL Server Management to create a website where users rate how bad their asthma was in certain cities across the United States. Users can leave reviews, or customize what other reviews they see. By allowing users to rate and see other reviews on how bad their asthma was in certain cities, users can better plan to manage their health and happiness.
 
 ## Project Preview - Main Home Page and Searching for a City
